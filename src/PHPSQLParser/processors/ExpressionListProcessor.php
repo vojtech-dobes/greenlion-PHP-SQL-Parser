@@ -315,6 +315,8 @@ class ExpressionListProcessor extends AbstractProcessor {
                     break;
 
                 case 'NULL':
+                case 'TRUE':
+                case 'FALSE':
                     $curr->setSubTree(false);
                     $curr->setTokenType(ExpressionType::CONSTANT);
                     break;
